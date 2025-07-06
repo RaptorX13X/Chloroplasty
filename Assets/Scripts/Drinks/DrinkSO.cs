@@ -10,4 +10,5 @@ public class Ingredient : ScriptableObject
 public class DrinkSO : ScriptableObject
 {
     public Ingredient[] ingredients;
+    public Color color;
 }
