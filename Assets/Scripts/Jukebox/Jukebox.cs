@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -15,6 +16,23 @@ public class Jukebox : MonoBehaviour
     private bool lofiPlaying;
     [SerializeField] private AudioSource rockMusic;
     private bool rockPlaying;
+
+    [SerializeField] private GameObject jukeboxScreen;
+
+    private void Awake()
+    {
+        jukeboxScreen.SetActive(false);
+    }
+
+    public void OpenJukeboxScreen()
+    {
+        jukeboxScreen.SetActive(true);
+    }
+
+    public void CloseJukeboxScreen()
+    {
+        jukeboxScreen.SetActive(false);
+    }
 
     private IEnumerator StopAllMusic()
     {
@@ -78,5 +96,10 @@ public class Jukebox : MonoBehaviour
         StartCoroutine(StopAllMusic());
         lofiPlaying = true;
         lofiMusic.Play();
+    }
+
+    public void StopMusic()
+    {
+        StartCoroutine(StopAllMusic());
     }
 }
