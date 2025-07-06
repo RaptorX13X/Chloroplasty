@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f7d487a37007408791862ef992b9a, type: 3}
+  m_Name: Purple Sweet
+  m_EditorClassIdentifier: 
+  ingredients:
+  - {fileID: 11400000, guid: cd6ac164094498f45a679a7b5bd25ff7, type: 2}
+  - {fileID: 11400000, guid: 51048f46b57e8024bac33754dd38b864, type: 2}
+  - {fileID: 11400000, guid: 9605adeecf904ba4d87a9fa0349fe5c1, type: 2}
