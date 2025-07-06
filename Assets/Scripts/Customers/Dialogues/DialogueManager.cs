@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     public bool isDialogueActive = false;
 
     public float typingSpeed = 0.08f;
+    private float cachedSpeed;
 
     public DialogueSO currentDialogue; 
     private DialogueLine currentLine;
@@ -34,6 +35,7 @@ public class DialogueManager : MonoBehaviour
 
         lines = new Queue<DialogueLine>();
         timeForLines = timeBetweenLines;
+        cachedSpeed = typingSpeed;
     }
 
     public void StartDialogue(DialogueSO dialogue)
@@ -61,6 +63,19 @@ public class DialogueManager : MonoBehaviour
         else if (!isDialogueTyping && timeForLines <= 0.1f)
         {
             timeForLines = timeBetweenLines;
+            //DisplayNextDialogueLine();
+        }
+    }
+
+    public void DialogueButton()
+    {
+        if (isDialogueTyping)
+        {
+            typingSpeed = 0.01f;
+        }
+        else
+        {
+            typingSpeed = cachedSpeed;
             DisplayNextDialogueLine();
         }
     }
