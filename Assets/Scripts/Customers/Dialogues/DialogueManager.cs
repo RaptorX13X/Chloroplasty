@@ -69,6 +69,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DialogueButton()
     {
+        if (!isDialogueActive) return;
         if (isDialogueTyping)
         {
             typingSpeed = 0.01f;
