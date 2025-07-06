@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb933b6ad655e7048abb6eac23231f89, type: 3}
+  m_Name: Day1 Customer3
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: d7943e1029fc5a849b686b88dce99839, type: 3}
+  desiredDrink: {fileID: 11400000, guid: 73ceaedb77a2f244aa540f05c3e7fbaa, type: 2}
+  dialogueToPlay: {fileID: 11400000, guid: 541f1e64f75bcd940a47b6df999a44e6, type: 2}
+  dialogueDrinkCorrect: {fileID: 11400000, guid: 4ebb025cfbd63694eadbb1ab1d899f42, type: 2}
+  dialogueDrinkIncorrect: {fileID: 11400000, guid: beeecfbb5e622684d8c9ad49a6a45fc0, type: 2}

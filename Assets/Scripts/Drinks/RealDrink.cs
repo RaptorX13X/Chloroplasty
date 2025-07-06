@@ -12,6 +12,8 @@ public class RealDrink : MonoBehaviour
     [SerializeField] private Image image;
     
     public static RealDrink Instance;
+    public bool drinkMade;
+    public DrinkSO drinkGiven;
 
     private void Awake()
     {
@@ -21,6 +23,7 @@ public class RealDrink : MonoBehaviour
     public void DrinkMade(DrinkSO drink)
     {
         image.color = drink.color;
+        drinkGiven = drink;
         StartCoroutine(Coroutine());
     }
 
@@ -30,8 +33,11 @@ public class RealDrink : MonoBehaviour
         transform.DOMove(new Vector3(transform.position.x - movementRange, transform.position.y), moveDuration);
         yield return new WaitForSeconds(waitDuration + moveDuration);
         image.DOFade(0, 0.1f);
-        transform.DOMove(new Vector3(transform.position.x + movementRange, transform.position.y), moveDuration);
+        transform.DOMove(new Vector3(transform.position.x + movementRange, transform.position.y), 0.1f);
         yield return new WaitForSeconds(moveDuration);
         image.DOFade(255, 0.1f);
+        drinkMade = true;
+        yield return new WaitForSeconds(moveDuration);
+        drinkGiven = null;
     }
 }

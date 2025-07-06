@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718f7d487a37007408791862ef992b9a, type: 3}
   m_Name: Red S&B
   m_EditorClassIdentifier: 
-  ingredients: []
-  color: {r: 0, g: 0, b: 0, a: 0}
+  ingredients:
+  - {fileID: 11400000, guid: cd6ac164094498f45a679a7b5bd25ff7, type: 2}
+  - {fileID: 11400000, guid: 9605adeecf904ba4d87a9fa0349fe5c1, type: 2}
+  - {fileID: 11400000, guid: 92d8311185a926648a8a47af7b5fd9f2, type: 2}
+  color: {r: 1, g: 0, b: 0, a: 0}
