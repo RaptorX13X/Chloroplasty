@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 
 public class SequenceManager : MonoBehaviour
 {
@@ -14,7 +15,8 @@ public class SequenceManager : MonoBehaviour
     [SerializeField] private float moveDuration;
     [SerializeField] private float waitDuration;
     private int characterIndex;
-    [SerializeField] private IngredientButton[] ingredientButtons; 
+    [SerializeField] private IngredientButton[] ingredientButtons;
+    [SerializeField] private TextMeshProUGUI dialogueArea;
 
     private void Start()
     {
@@ -36,11 +38,14 @@ public class SequenceManager : MonoBehaviour
         TriggerDialogue();
         yield return new WaitForSeconds(0.2f);
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
+        dialogueArea.text = characters[characterIndex].drinkName;
+        // lub drink hint zależnie od odkrycia
         foreach (IngredientButton ingredientButton in ingredientButtons)
         {
             ingredientButton.inCup = false;
         }
         yield return new WaitUntil(() => RealDrink.Instance.drinkMade);
+        dialogueArea.text = "";
         if (characters[characterIndex].desiredDrink == RealDrink.Instance.drinkGiven)
         {
             //gib point
