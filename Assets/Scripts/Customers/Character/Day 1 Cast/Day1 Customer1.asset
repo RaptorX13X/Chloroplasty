@@ -17,3 +17,4 @@ MonoBehaviour:
   dialogueToPlay: {fileID: 11400000, guid: a5e01ca92c526744a83df19900ba77d4, type: 2}
   dialogueDrinkCorrect: {fileID: 11400000, guid: e6e0415f79924e04ca5560c994c30b51, type: 2}
   dialogueDrinkIncorrect: {fileID: 11400000, guid: a99c791203134194987afd86f46091e4, type: 2}
+  drinkHint: Dark zesty lilac
