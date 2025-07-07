@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: MC
-    line: Fuck these lizards are so annoying
+    line: The day is done.
     hasChoices: 0
     choice1: 
     choice2: 
@@ -24,7 +24,7 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: MC
-    line: Bye
+    line: Time to end my shift and prepare for the next day.
     hasChoices: 0
     choice1: 
     choice2: 

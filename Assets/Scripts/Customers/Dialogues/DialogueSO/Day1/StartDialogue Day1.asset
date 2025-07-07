@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: MC
-    line: Welcome to my hole
+    line: Welcome to my bar at the edge of the universe.
     hasChoices: 0
     choice1: 
     choice2: 
@@ -24,7 +24,7 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: MC
-    line: I wish i could just go to eep
+    line: Help me keep up the chemistry between guests by serving them correct drinks.
     hasChoices: 0
     choice1: 
     choice2: 
@@ -33,7 +33,8 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: MC
-    line: enjoy gam uwu
+    line: One wrong drink is a one less star in the sky. Help me make sure they don't
+      exoplode into supernovas.
     hasChoices: 0
     choice1: 
     choice2: 
