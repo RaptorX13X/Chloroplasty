@@ -3682,6 +3682,9 @@ MonoBehaviour:
   moveDuration: 2
   waitDuration: 2
   image: {fileID: 1059943829}
+  shakerCap: {fileID: 0}
+  shaker: {fileID: 0}
+  cap: {fileID: 0}
   drinkMade: 0
   drinkGiven: {fileID: 0}
 --- !u!222 &1059943831
@@ -5453,6 +5456,11 @@ MonoBehaviour:
   - {fileID: 847009426}
   - {fileID: 838212276}
   dialogueArea: {fileID: 0}
+  mainCharacterTransform: {fileID: 0}
+  mainCharacterImage: {fileID: 0}
+  lossDialogue: {fileID: 0}
+  startDialogue: {fileID: 0}
+  endDialogue: {fileID: 0}
 --- !u!4 &1306482398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7690176784384657456, guid: 0aa2d019a55af6346833b3fb0e3f81ba, type: 3}
@@ -8258,11 +8266,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7690176784384657456, guid: 0aa2d019a55af6346833b3fb0e3f81ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -563
       objectReference: {fileID: 0}
     - target: {fileID: 7690176784384657456, guid: 0aa2d019a55af6346833b3fb0e3f81ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 53
       objectReference: {fileID: 0}
     - target: {fileID: 7690176784384657456, guid: 0aa2d019a55af6346833b3fb0e3f81ba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8295,6 +8303,14 @@ PrefabInstance:
     - target: {fileID: 7690176784384657456, guid: 0aa2d019a55af6346833b3fb0e3f81ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551252427871667627, guid: 0aa2d019a55af6346833b3fb0e3f81ba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933057490699010571, guid: 0aa2d019a55af6346833b3fb0e3f81ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
