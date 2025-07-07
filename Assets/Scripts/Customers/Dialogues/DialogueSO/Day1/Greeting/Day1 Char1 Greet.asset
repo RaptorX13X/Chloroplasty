@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: Emery
-    line: Hi
+    line: Tell me, Paradox, do they often order order things to "kill time"?
     hasChoices: 0
     choice1: 
     choice2: 
@@ -24,7 +24,7 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: Emery
-    line: I'm so thirsty
+    line: I mean, in THIS place...
     hasChoices: 0
     choice1: 
     choice2: 
@@ -33,7 +33,8 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: Emery
-    line: Give me an Pangalactic Gargleblaster
+    line: Eh. Anyways. I feel like purple today. Just don't make it to sweet, yeah,
+      darling?
     hasChoices: 0
     choice1: 
     choice2: 
