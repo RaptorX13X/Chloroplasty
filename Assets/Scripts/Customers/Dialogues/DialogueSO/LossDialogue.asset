@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: Paradox
-    line: Fuck
+    line: 'Maybe serving drinks wasn''t my calling in the end. '
     hasChoices: 0
     choice1: 
     choice2: 
@@ -24,7 +24,7 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: Paradox
-    line: Well time to explode uwu
+    line: Maybe I can try again next time.
     hasChoices: 0
     choice1: 
     choice2: 
