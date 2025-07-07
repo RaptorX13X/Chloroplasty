@@ -124,7 +124,7 @@ public class SequenceManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         McFadeOut();
         yield return new WaitForSeconds(fadeInDuration);
-        //end screen
+        InGameMenus.instance.OnEnd();
     }
 
     public void OnLoss()
