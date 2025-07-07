@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Gummigoo
-    line: Ew.
+      name: Naadya
+    line: This tastes worse than sewage water.
     hasChoices: 0
     choice1: 
     choice2: 

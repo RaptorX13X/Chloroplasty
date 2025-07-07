@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Ilaj
+      name: Emery
     line: Hi
     hasChoices: 0
     choice1: 
@@ -23,7 +23,7 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: Gummigoo
+      name: Emery
     line: I'm so thirsty
     hasChoices: 0
     choice1: 
@@ -32,8 +32,8 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: Gummigoo
-    line: Give me an Eldritch Blast
+      name: Emery
+    line: Give me an Pangalactic Gargleblaster
     hasChoices: 0
     choice1: 
     choice2: 

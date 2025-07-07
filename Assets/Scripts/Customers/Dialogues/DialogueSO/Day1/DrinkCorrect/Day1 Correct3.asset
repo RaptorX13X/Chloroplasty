@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: Gummigoo
-    line: YUM YUM
+    line: Exactly what I needed!
     hasChoices: 0
     choice1: 
     choice2: 

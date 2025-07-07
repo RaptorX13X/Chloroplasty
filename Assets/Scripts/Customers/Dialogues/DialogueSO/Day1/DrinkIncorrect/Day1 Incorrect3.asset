@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: Gummigoo
-    line: Ew.
+    line: ' I wanted a real drink, not whatever this is.'
     hasChoices: 0
     choice1: 
     choice2: 

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Gummigoo
-    line: YUM YUM
+      name: Orchis
+    line: This is perfect, I have to name one of my kids after you!
     hasChoices: 0
     choice1: 
     choice2: 
