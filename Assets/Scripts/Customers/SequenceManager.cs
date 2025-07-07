@@ -20,6 +20,8 @@ public class SequenceManager : MonoBehaviour
     [SerializeField] private Transform mainCharacterTransform;
     [SerializeField] private Image mainCharacterImage;
     [SerializeField] private DialogueSO lossDialogue;
+    [SerializeField] private DialogueSO startDialogue;
+    [SerializeField] private DialogueSO endDialogue;
     
     public static SequenceManager instance;
 
@@ -27,6 +29,19 @@ public class SequenceManager : MonoBehaviour
     {
         instance = this;
         characterIndex = 0;
+        StartCoroutine(StartSequence());
+    }
+
+    private IEnumerator StartSequence()
+    {
+        yield return new WaitForSeconds(0.5f);
+        mainCharacterImage.DOFade(255, 3f);
+        yield return new WaitForSeconds(3f);
+        DialogueManager.Instance.StartDialogue(startDialogue);
+        yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
+        yield return new WaitForSeconds(0.5f);
+        mainCharacterImage.DOFade(0, 3f);
+        yield return new WaitForSeconds(3f);
         StartCoroutine(Sequence());
     }
 
@@ -71,6 +86,10 @@ public class SequenceManager : MonoBehaviour
         {
             StartCoroutine(Sequence());
         }
+        else
+        {
+            StartCoroutine(EndSequence());
+        }
     }
 
     private IEnumerator LossSequence()
@@ -81,6 +100,19 @@ public class SequenceManager : MonoBehaviour
         DialogueManager.Instance.StartDialogue(lossDialogue);
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
         InGameMenus.instance.OnLoss();
+    }
+
+    private IEnumerator EndSequence()
+    {
+        yield return new WaitForSeconds(0.5f);
+        mainCharacterImage.DOFade(255, 3f);
+        yield return new WaitForSeconds(3f);
+        DialogueManager.Instance.StartDialogue(endDialogue);
+        yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
+        yield return new WaitForSeconds(0.5f);
+        mainCharacterImage.DOFade(0, 3f);
+        yield return new WaitForSeconds(3f);
+        //end screen
     }
 
     public void OnLoss()
