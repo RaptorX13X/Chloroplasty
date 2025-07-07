@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Gummigoo
-    line: Hi
+      name: Naadya
+    line: My wife is pissing me off.
     hasChoices: 0
     choice1: 
     choice2: 
@@ -23,8 +23,8 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: Gummigoo
-    line: I'm so thirsty
+      name: Naadya
+    line: 'I can feel my sanity withering away. '
     hasChoices: 0
     choice1: 
     choice2: 
@@ -32,8 +32,8 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: Gummigoo
-    line: Give me a Death
+      name: Naadya
+    line: I need something strong, like an Eldritch Blast?
     hasChoices: 0
     choice1: 
     choice2: 

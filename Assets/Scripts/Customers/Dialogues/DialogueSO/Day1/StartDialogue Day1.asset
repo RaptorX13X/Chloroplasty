@@ -33,8 +33,36 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: Paradox
-    line: One wrong drink is a one less star in the sky. Help me make sure they don't
-      exoplode into supernovas.
+    line: 'One wrong drink is a one less star in the sky. And I don''t like losing
+      friends. '
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Paradox
+    line: Especially not if I created them with parts of my very being - chemical
+      mollecules and all.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Paradox
+    line: So please help me make sure they don't exoplode into supernovas.
+    hasChoices: 0
+    choice1: 
+    choice2: 
+    soundToPlay: {fileID: 0}
+    dialoguetoStartOn1: {fileID: 0}
+    dialoguetoStartOn2: {fileID: 0}
+  - character:
+      name: Paradox
+    line: That would be... unfortunate. Fine, let's get to it.
     hasChoices: 0
     choice1: 
     choice2: 

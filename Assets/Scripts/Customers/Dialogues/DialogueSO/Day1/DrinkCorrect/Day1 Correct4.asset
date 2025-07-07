@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Gummigoo
-    line: YUM YUM
+      name: Naadya
+    line: Amazing, I can already feel my brain turning off.
     hasChoices: 0
     choice1: 
     choice2: 

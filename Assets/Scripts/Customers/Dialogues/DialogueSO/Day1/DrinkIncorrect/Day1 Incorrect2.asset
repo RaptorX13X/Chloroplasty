@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Gummigoo
-    line: Ew.
+      name: Naadya
+    line: Wow. This is worse than my wife. Thanks.
     hasChoices: 0
     choice1: 
     choice2: 

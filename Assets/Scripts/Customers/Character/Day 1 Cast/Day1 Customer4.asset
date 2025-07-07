@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Day1 Customer4
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: d7943e1029fc5a849b686b88dce99839, type: 3}
-  desiredDrink: {fileID: 11400000, guid: 56403501f9c32424f8d75c1271d4c88e, type: 2}
+  desiredDrink: {fileID: 11400000, guid: 3776526dc497f5348b3083b2541a547b, type: 2}
   dialogueToPlay: {fileID: 11400000, guid: 86fc75f375b09b4458293c88d9932b66, type: 2}
   dialogueDrinkCorrect: {fileID: 11400000, guid: 8ed3b04453acec54995ae468e2e9075e, type: 2}
   dialogueDrinkIncorrect: {fileID: 11400000, guid: f5cb7ccb69692af4e9635b3f82f8bcb7, type: 2}
-  drinkHint: Not sweet and not green nor orange
+  drinkHint: probably? Considering she wants it green and sour.
+  characterIndex: 1

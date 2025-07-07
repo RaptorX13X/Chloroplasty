@@ -34,6 +34,16 @@ public class SequenceManager : MonoBehaviour
     [SerializeField] private Image swampLadyHappyBlob;
     [SerializeField] private Image swampLadyAngry;
     [SerializeField] private Image swampLadyAngryBlob;
+    [Header("Bug")] 
+    [SerializeField] private Image bugNeutral;
+    [SerializeField] private Image bugNeutral1;
+    [SerializeField] private Image bugNeutral2;
+    [SerializeField] private Image bugAngry;
+    [SerializeField] private Image bugAngry1;
+    [SerializeField] private Image bugAngry2;
+    [SerializeField] private Image bugHappy;
+    [SerializeField] private Image bugHappy1;
+    [SerializeField] private Image bugHappy2;
     
 
     [SerializeField] private float fadeInDuration;
@@ -165,6 +175,11 @@ public class SequenceManager : MonoBehaviour
                 swampLadyNeutral.DOFade(1f, fadeInDuration);
                 swampLadyNeutralBlob.DOFade(1f, fadeInDuration);
                 break;
+            case 2:
+                bugNeutral.DOFade(1f, fadeInDuration);
+                bugNeutral1.DOFade(1f, fadeInDuration);
+                bugNeutral2.DOFade(1f, fadeInDuration);
+                break;
         }
     }
 
@@ -184,7 +199,14 @@ public class SequenceManager : MonoBehaviour
                 swampLadyAngry.DOFade(1f, 0f);
                 swampLadyAngryBlob.DOFade(1f, 0f);
                 break;
-                
+            case 2:
+                bugNeutral.DOFade(0, 0f);
+                bugNeutral1.DOFade(0, 0f);
+                bugNeutral2.DOFade(0, 0f);
+                bugAngry.DOFade(1f, 0f);
+                bugAngry1.DOFade(1f, 0f);
+                bugAngry2.DOFade(1f, 0f);
+                break;
         }
     }
 
@@ -202,6 +224,14 @@ public class SequenceManager : MonoBehaviour
                 swampLadyNeutralBlob.DOFade(0, 0f);
                 swampLadyHappy.DOFade(1f, 0);
                 swampLadyHappyBlob.DOFade(1f, 0);
+                break;
+            case 2:
+                bugNeutral.DOFade(0, 0f);
+                bugNeutral1.DOFade(0, 0f);
+                bugNeutral2.DOFade(0, 0f);
+                bugHappy.DOFade(1f, 0);
+                bugHappy2.DOFade(1f, 0);
+                bugHappy1.DOFade(1f, 0);
                 break;
         }
     }
@@ -224,6 +254,17 @@ public class SequenceManager : MonoBehaviour
                 swampLadyHappyBlob.DOFade(0, fadeInDuration);
                 swampLadyAngry.DOFade(0, fadeInDuration);
                 swampLadyAngryBlob.DOFade(0, fadeInDuration);
+                break;
+            case 2:
+                bugNeutral.DOFade(0, 0f);
+                bugNeutral1.DOFade(0, 0f);
+                bugNeutral2.DOFade(0, 0f);
+                bugAngry.DOFade(0f, 0);
+                bugAngry1.DOFade(0f, 0);
+                bugAngry2.DOFade(0f, 0);
+                bugHappy.DOFade(0f, 0);
+                bugHappy2.DOFade(0f, 0);
+                bugHappy1.DOFade(0f, 0);
                 break;
         }
     }

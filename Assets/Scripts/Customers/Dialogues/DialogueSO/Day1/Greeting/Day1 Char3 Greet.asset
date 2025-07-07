@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: Gummigoo
-    line: Hi
+    line: 'Man, I just got pregnant and killed my husband. '
     hasChoices: 0
     choice1: 
     choice2: 
@@ -24,16 +24,7 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: Gummigoo
-    line: I'm so thirsty
-    hasChoices: 0
-    choice1: 
-    choice2: 
-    soundToPlay: {fileID: 0}
-    dialoguetoStartOn1: {fileID: 0}
-    dialoguetoStartOn2: {fileID: 0}
-  - character:
-      name: Gummigoo
-    line: Give me a Strawberry bonanza
+    line: ' I need a Creamcake.'
     hasChoices: 0
     choice1: 
     choice2: 

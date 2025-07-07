@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: Paradox
-    line: The day is done.
+    line: That was an... experience. But alas my day is done.
     hasChoices: 0
     choice1: 
     choice2: 

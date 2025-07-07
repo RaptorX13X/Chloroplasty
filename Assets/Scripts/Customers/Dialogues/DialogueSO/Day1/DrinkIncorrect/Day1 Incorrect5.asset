@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Gummigoo
-    line: Ew.
+      name: Orchis
+    line: I'm not a beetle, I don't like eating dung.
     hasChoices: 0
     choice1: 
     choice2: 
