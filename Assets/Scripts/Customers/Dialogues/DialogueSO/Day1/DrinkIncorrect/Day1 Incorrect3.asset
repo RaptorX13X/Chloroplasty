@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Gummigoo
+      name: Orchis
     line: ' I wanted a real drink, not whatever this is.'
     hasChoices: 0
     choice1: 

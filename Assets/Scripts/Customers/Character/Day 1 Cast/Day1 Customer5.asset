@@ -18,4 +18,4 @@ MonoBehaviour:
   dialogueDrinkCorrect: {fileID: 11400000, guid: cc72cf9ee18dc504584aa7a0ca375b84, type: 2}
   dialogueDrinkIncorrect: {fileID: 11400000, guid: 7de6482697b31184e8c63a643f9addae, type: 2}
   drinkHint: sounds like blood, but its just a red drink with garnishes.
-  characterIndex: 0
+  characterIndex: 2
