@@ -12,9 +12,6 @@ public class SequenceManager : MonoBehaviour
     private int characterIndex;
     [SerializeField] private IngredientButton[] ingredientButtons;
     [SerializeField] private TextMeshProUGUI dialogueArea;
-
-    [SerializeField] private Transform mainCharacterTransform;
-    [SerializeField] private Image mainCharacterImage;
     [SerializeField] private DialogueSO lossDialogue;
     [SerializeField] private DialogueSO startDialogue;
     [SerializeField] private DialogueSO endDialogue;
@@ -30,6 +27,14 @@ public class SequenceManager : MonoBehaviour
     [SerializeField] private Image tieflingHappy;
     [SerializeField] private Image tieflingAngry;
     [SerializeField] private Image tieflingAngryEye;
+    [Header("SwampLady")]
+    [SerializeField] private Image swampLadyNeutral;
+    [SerializeField] private Image swampLadyNeutralBlob;
+    [SerializeField] private Image swampLadyHappy;
+    [SerializeField] private Image swampLadyHappyBlob;
+    [SerializeField] private Image swampLadyAngry;
+    [SerializeField] private Image swampLadyAngryBlob;
+    
 
     [SerializeField] private float fadeInDuration;
     private int currentCharacterIndex;
@@ -44,6 +49,10 @@ public class SequenceManager : MonoBehaviour
     private IEnumerator StartSequence()
     {
         yield return new WaitForSeconds(0.5f);
+        foreach (IngredientButton ingredientButton in ingredientButtons)
+        {
+            ingredientButton.inCup = true;
+        }
         McFadeIn();
         yield return new WaitForSeconds(fadeInDuration);
         DialogueManager.Instance.StartDialogue(startDialogue);
@@ -56,6 +65,7 @@ public class SequenceManager : MonoBehaviour
 
     private IEnumerator Sequence()
     {
+        yield return new WaitForSeconds(waitDuration);
         RealDrink.Instance.drinkMade = false;
         foreach (IngredientButton ingredientButton in ingredientButtons)
         {
@@ -68,7 +78,7 @@ public class SequenceManager : MonoBehaviour
         TriggerDialogue();
         yield return new WaitForSeconds(0.2f);
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
-        dialogueArea.text = characters[characterIndex].desiredDrink.drinkName;
+        dialogueArea.text = characters[characterIndex].desiredDrink.drinkName + characters[characterIndex].drinkHint;
         // lub drink hint zależnie od odkrycia
         foreach (IngredientButton ingredientButton in ingredientButtons)
         {
@@ -148,8 +158,12 @@ public class SequenceManager : MonoBehaviour
         switch (currentCharacterIndex)
         {
             case 0:
-                tieflingNeutral.DOFade(255, fadeInDuration);
-                tieflingNeutralEye.DOFade(255, fadeInDuration);
+                tieflingNeutral.DOFade(1f, fadeInDuration);
+                tieflingNeutralEye.DOFade(1f, fadeInDuration);
+                break;
+            case 1: 
+                swampLadyNeutral.DOFade(1f, fadeInDuration);
+                swampLadyNeutralBlob.DOFade(1f, fadeInDuration);
                 break;
         }
     }
@@ -161,9 +175,16 @@ public class SequenceManager : MonoBehaviour
             case 0:
                 tieflingNeutral.DOFade(0, 0f);
                 tieflingNeutralEye.DOFade(0, 0f);
-                tieflingAngry.DOFade(255, 0);
-                tieflingAngryEye.DOFade(255, 0);
+                tieflingAngry.DOFade(1f, 0);
+                tieflingAngryEye.DOFade(1f, 0);
                 break;
+            case 1:
+                swampLadyNeutral.DOFade(0, 0f);
+                swampLadyNeutralBlob.DOFade(0, 0f);
+                swampLadyAngry.DOFade(1f, 0f);
+                swampLadyAngryBlob.DOFade(1f, 0f);
+                break;
+                
         }
     }
 
@@ -174,7 +195,13 @@ public class SequenceManager : MonoBehaviour
             case 0:
                 tieflingNeutral.DOFade(0, 0f);
                 tieflingNeutralEye.DOFade(0, 0f);
-                tieflingHappy.DOFade(255, 0);
+                tieflingHappy.DOFade(1f, 0);
+                break;
+            case 1:
+                swampLadyNeutral.DOFade(0, 0f);
+                swampLadyNeutralBlob.DOFade(0, 0f);
+                swampLadyHappy.DOFade(1f, 0);
+                swampLadyHappyBlob.DOFade(1f, 0);
                 break;
         }
     }
@@ -190,13 +217,21 @@ public class SequenceManager : MonoBehaviour
                 tieflingAngryEye.DOFade(0, fadeInDuration);
                 tieflingHappy.DOFade(0, fadeInDuration);
                 break;
+            case 1:
+                swampLadyNeutral.DOFade(0, fadeInDuration);
+                swampLadyNeutralBlob.DOFade(0, fadeInDuration);
+                swampLadyHappy.DOFade(0, fadeInDuration);
+                swampLadyHappyBlob.DOFade(0, fadeInDuration);
+                swampLadyAngry.DOFade(0, fadeInDuration);
+                swampLadyAngryBlob.DOFade(0, fadeInDuration);
+                break;
         }
     }
 
     private void McFadeIn()
     {
-        mcSprite.DOFade(255f, fadeInDuration);
-        mcSpriteHead.DOFade(255f, fadeInDuration);
+        mcSprite.DOFade(1f, fadeInDuration);
+        mcSpriteHead.DOFade(1f, fadeInDuration);
     }
 
     private void McFadeOut()
