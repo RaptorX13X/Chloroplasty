@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: MC
+      name: Paradox
     line: Fuck
     hasChoices: 0
     choice1: 
@@ -23,7 +23,7 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: MC
+      name: Paradox
     line: Well time to explode uwu
     hasChoices: 0
     choice1: 

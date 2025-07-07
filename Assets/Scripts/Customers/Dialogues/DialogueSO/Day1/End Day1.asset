@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: MC
+      name: Paradox
     line: The day is done.
     hasChoices: 0
     choice1: 
@@ -23,7 +23,7 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: MC
+      name: Paradox
     line: Time to end my shift and prepare for the next day.
     hasChoices: 0
     choice1: 

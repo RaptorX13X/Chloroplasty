@@ -5215,10 +5215,10 @@ MonoBehaviour:
   liftDuration: 0.5
   rotateDuration: 1
   shakeDuration: 3
-  shakeStrength: 4
-  shakeVibrato: 10
-  shakeRandomness: 90
-  settleDuration: 0.5
+  shakeStrength: 30
+  shakeVibrato: 25
+  shakeRandomness: 20
+  settleDuration: 0.1
   movementRange: 500
   moveDuration: 2
   waitDuration: 2

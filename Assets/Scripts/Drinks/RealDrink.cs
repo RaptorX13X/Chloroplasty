@@ -73,7 +73,7 @@ public class RealDrink : MonoBehaviour
         yield return new WaitForSeconds(0.01f);
 
         Vector3 leftPos = new Vector3(startLocalPos.x - movementRange, startLocalPos.y, startLocalPos.z);
-        yield return rt.DOLocalMove(leftPos, moveDuration).WaitForCompletion();
+        yield return rt.DOLocalMove(leftPos, moveDuration).SetEase(Ease.Linear).WaitForCompletion();
         yield return rt.DOLocalRotate(new Vector3(0f, 0f, tiltAngle), tiltDuration).WaitForCompletion();
         yield return rt.DOLocalRotate(Vector3.zero, tiltDuration).WaitForCompletion();
         yield return new WaitForSeconds(3f);

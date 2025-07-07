@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: MC
+      name: Paradox
     line: Welcome to my bar at the edge of the universe.
     hasChoices: 0
     choice1: 
@@ -23,7 +23,7 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: MC
+      name: Paradox
     line: Help me keep up the chemistry between guests by serving them correct drinks.
     hasChoices: 0
     choice1: 
@@ -32,7 +32,7 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: MC
+      name: Paradox
     line: One wrong drink is a one less star in the sky. Help me make sure they don't
       exoplode into supernovas.
     hasChoices: 0
