@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718f7d487a37007408791862ef992b9a, type: 3}
   m_Name: Orange Sweet
   m_EditorClassIdentifier: 
+  drinkName: Gaussian Blur
   ingredients:
   - {fileID: 11400000, guid: cd6ac164094498f45a679a7b5bd25ff7, type: 2}
   - {fileID: 11400000, guid: 6eebc97c1ab87f14dbeda5517dba2a4c, type: 2}
