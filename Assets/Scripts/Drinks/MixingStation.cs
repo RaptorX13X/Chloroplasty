@@ -47,7 +47,6 @@ public class MixingStation : MonoBehaviour
         foreach (var button in ingredientButtons)
         {
             button.inCup = false;
-            button.selected = false;
         }
 
         amountInShaker = 0;
@@ -62,7 +61,6 @@ public class MixingStation : MonoBehaviour
         foreach (var button in ingredientButtons)
         {
             button.inCup = false;
-            button.selected = false;
         }
         Debug.Log(amountInShaker);
         foreach (var slop in ingredients)
