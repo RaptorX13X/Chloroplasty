@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Gummigoo
-      icon: {fileID: 21300000, guid: d7943e1029fc5a849b686b88dce99839, type: 3}
+      name: Ilaj
     line: Hi
     hasChoices: 0
     choice1: 
@@ -25,7 +24,6 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: Gummigoo
-      icon: {fileID: 21300000, guid: d7943e1029fc5a849b686b88dce99839, type: 3}
     line: I'm so thirsty
     hasChoices: 0
     choice1: 
@@ -35,7 +33,6 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: Gummigoo
-      icon: {fileID: 21300000, guid: d7943e1029fc5a849b686b88dce99839, type: 3}
     line: Give me an Eldritch Blast
     hasChoices: 0
     choice1: 

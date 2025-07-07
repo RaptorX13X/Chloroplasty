@@ -8,10 +8,6 @@ using TMPro;
 public class SequenceManager : MonoBehaviour
 {
     [SerializeField] private CharacterSO[] characters;
-    // [SerializeField] private Image characterImage;
-    // [SerializeField] private Transform characterTransform;
-    // [SerializeField] private float movementRange;
-    // [SerializeField] private float moveDuration;
     [SerializeField] private float waitDuration;
     private int characterIndex;
     [SerializeField] private IngredientButton[] ingredientButtons;
@@ -25,8 +21,10 @@ public class SequenceManager : MonoBehaviour
     
     public static SequenceManager instance;
 
+    [Header("MC")] 
+    [SerializeField] private Image mcSprite;
+    [SerializeField] private Image mcSpriteHead;
     [Header("Tiefling")]
-    [SerializeField] private GameObject tieflingParent;
     [SerializeField] private Image tieflingNeutral;
     [SerializeField] private Image tieflingNeutralEye;
     [SerializeField] private Image tieflingHappy;
@@ -46,13 +44,13 @@ public class SequenceManager : MonoBehaviour
     private IEnumerator StartSequence()
     {
         yield return new WaitForSeconds(0.5f);
-        mainCharacterImage.DOFade(255, 3f);
-        yield return new WaitForSeconds(3f);
+        McFadeIn();
+        yield return new WaitForSeconds(fadeInDuration);
         DialogueManager.Instance.StartDialogue(startDialogue);
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
         yield return new WaitForSeconds(0.5f);
-        mainCharacterImage.DOFade(0, 3f);
-        yield return new WaitForSeconds(3f);
+        McFadeOut();
+        yield return new WaitForSeconds(fadeInDuration);
         StartCoroutine(Sequence());
     }
 
@@ -107,23 +105,25 @@ public class SequenceManager : MonoBehaviour
     private IEnumerator LossSequence()
     {
         yield return new WaitForSeconds(0.5f);
-        mainCharacterImage.DOFade(255, 3f);
-        yield return new WaitForSeconds(3f);
+        McFadeIn();
+        yield return new WaitForSeconds(fadeInDuration);
         DialogueManager.Instance.StartDialogue(lossDialogue);
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
+        McFadeOut();
+        yield return new WaitForSeconds(fadeInDuration);
         InGameMenus.instance.OnLoss();
     }
 
     private IEnumerator EndSequence()
     {
         yield return new WaitForSeconds(0.5f);
-        mainCharacterImage.DOFade(255, 3f);
-        yield return new WaitForSeconds(3f);
+        McFadeIn();
+        yield return new WaitForSeconds(fadeInDuration);
         DialogueManager.Instance.StartDialogue(endDialogue);
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
         yield return new WaitForSeconds(0.5f);
-        mainCharacterImage.DOFade(0, 3f);
-        yield return new WaitForSeconds(3f);
+        McFadeOut();
+        yield return new WaitForSeconds(fadeInDuration);
         //end screen
     }
 
@@ -141,12 +141,6 @@ public class SequenceManager : MonoBehaviour
     private void ChooseCharacter()
     {
         currentCharacterIndex = characters[characterIndex].characterIndex;
-        switch (currentCharacterIndex)
-        {
-            case 0:
-                tieflingParent.SetActive(true);
-                break;
-        }
     }
 
     private void SpawnCharacter()
@@ -197,5 +191,17 @@ public class SequenceManager : MonoBehaviour
                 tieflingHappy.DOFade(0, fadeInDuration);
                 break;
         }
+    }
+
+    private void McFadeIn()
+    {
+        mcSprite.DOFade(255f, fadeInDuration);
+        mcSpriteHead.DOFade(255f, fadeInDuration);
+    }
+
+    private void McFadeOut()
+    {
+        mcSprite.DOFade(0f, fadeInDuration);
+        mcSpriteHead.DOFade(0f, fadeInDuration);
     }
 }
