@@ -11,6 +11,7 @@ public class MixingStation : MonoBehaviour
     public int amountInShaker;
     [SerializeField] private IngredientButton[] ingredientButtons;
     private DrinkSO currentDrink;
+    [SerializeField] private AudioClip clip;
 
     private void Awake()
     {
@@ -56,6 +57,7 @@ public class MixingStation : MonoBehaviour
 
     public void PourOut()
     {
+        AudioController.instance.PlayOneShot(clip);
         ingredients.Clear();
         amountInShaker = 0;
         foreach (var button in ingredientButtons)

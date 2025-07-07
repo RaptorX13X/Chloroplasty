@@ -5647,6 +5647,7 @@ MonoBehaviour:
   cap: {fileID: 1498659295}
   drinkMade: 0
   drinkGiven: {fileID: 0}
+  clip: {fileID: 8300000, guid: bcdf081e98cd3694caac39166666d8aa, type: 3}
 --- !u!222 &1059943831
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7167,6 +7168,7 @@ MonoBehaviour:
   - {fileID: 1516326611}
   - {fileID: 2070156964}
   - {fileID: 1804289456}
+  clip: {fileID: 8300000, guid: 40af33dca7aec6f4d8bf1bbaca83e530, type: 3}
 --- !u!4 &1269771227
 Transform:
   m_ObjectHideFlags: 0

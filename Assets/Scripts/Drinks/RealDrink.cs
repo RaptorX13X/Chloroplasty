@@ -32,6 +32,8 @@ public class RealDrink : MonoBehaviour
     public static RealDrink Instance;
     public bool drinkMade;
     public DrinkSO drinkGiven;
+    
+    [SerializeField] private AudioClip clip;
 
     private void Awake()
     {
@@ -55,6 +57,7 @@ public class RealDrink : MonoBehaviour
 
         yield return rt.DOLocalRotate(new Vector3(0f, 0f, -45f), rotateDuration).WaitForCompletion();
         Vector3 localShakeDir = rt.up * shakeStrength;
+        AudioController.instance.PlayOneShot(clip);
         Tween shakeTween = DOTween.To(
             () => rt.localPosition,
             pos => rt.localPosition = pos,
