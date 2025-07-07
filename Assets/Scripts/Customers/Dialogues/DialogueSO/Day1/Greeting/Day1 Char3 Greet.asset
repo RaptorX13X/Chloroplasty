@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueLines:
   - character:
-      name: Gummigoo
+      name: Orchis
     line: 'Man, I just got pregnant and killed my husband. '
     hasChoices: 0
     choice1: 
@@ -23,7 +23,7 @@ MonoBehaviour:
     dialoguetoStartOn1: {fileID: 0}
     dialoguetoStartOn2: {fileID: 0}
   - character:
-      name: Gummigoo
+      name: Orchis
     line: ' I need a Creamcake.'
     hasChoices: 0
     choice1: 

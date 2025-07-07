@@ -112,7 +112,7 @@ public class SequenceManager : MonoBehaviour
         DespawnCharacter();
         characterIndex++;
         yield return new WaitForSeconds(fadeInDuration);
-        if (characterIndex <= characters.Length)
+        if (characterIndex < characters.Length)
         {
             StartCoroutine(Sequence());
         }
