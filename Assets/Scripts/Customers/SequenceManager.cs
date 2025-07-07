@@ -105,11 +105,14 @@ public class SequenceManager : MonoBehaviour
         {
             CharacterAngry();
             DialogueManager.Instance.StartDialogue(characters[characterIndex].dialogueDrinkIncorrect);
-            yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive); 
-            PointsManager.instance.LosePoints();
+            yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
         }
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
         DespawnCharacter();
+        if (characters[characterIndex].desiredDrink == !RealDrink.Instance.drinkGiven)
+        {
+            PointsManager.instance.LosePoints();
+        }
         characterIndex++;
         yield return new WaitForSeconds(fadeInDuration);
         if (characterIndex < characters.Length)
