@@ -39,12 +39,12 @@ public class RealDrink : MonoBehaviour
 
     public void DrinkMade(DrinkSO drink)
     {
-        image.sprite = drink.icon;
+        var drinkSprite = drink.icon;
         drinkGiven = drink;
-        StartCoroutine(Coroutine());
+        StartCoroutine(Coroutine(drinkSprite));
     }
 
-    private IEnumerator Coroutine()
+    private IEnumerator Coroutine(Sprite sprite)
     {
         RectTransform rt = transform as RectTransform;
         Vector3 startLocalPos = rt.localPosition;
@@ -66,6 +66,7 @@ public class RealDrink : MonoBehaviour
         yield return rt.DOLocalMove(startLocalPos, settleDuration).WaitForCompletion();
 
         shakerCap.SetTrigger("open");
+        image.sprite = sprite;
         yield return new WaitForSeconds(waitDuration);
         cap.CrossFadeAlpha(0f, 0f, true);
         yield return new WaitForSeconds(0.01f);
