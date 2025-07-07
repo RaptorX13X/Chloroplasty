@@ -11,5 +11,5 @@ public class DrinkSO : ScriptableObject
 {
     public string drinkName;
     public Ingredient[] ingredients;
-    public Color color;
+    public Sprite icon;
 }
