@@ -17,6 +17,6 @@ MonoBehaviour:
   dialogueToPlay: {fileID: 11400000, guid: 541f1e64f75bcd940a47b6df999a44e6, type: 2}
   dialogueDrinkCorrect: {fileID: 11400000, guid: 4ebb025cfbd63694eadbb1ab1d899f42, type: 2}
   dialogueDrinkIncorrect: {fileID: 11400000, guid: beeecfbb5e622684d8c9ad49a6a45fc0, type: 2}
-  drinkHint: I hope she means the yellow drink garnished with everything, not the
-    cake.
+  drinkHint: ' I hope she means the yellow drink garnished with everything, not the
+    cake.'
   characterIndex: 2
