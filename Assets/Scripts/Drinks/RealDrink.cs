@@ -26,6 +26,7 @@ public class RealDrink : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private Animator shakerCap;
     [SerializeField] private Sprite shaker;
+    [SerializeField] private Sprite emptyGlass;
     [SerializeField] private Image cap;
 
     public static RealDrink Instance;
@@ -76,7 +77,9 @@ public class RealDrink : MonoBehaviour
         yield return rt.DOLocalRotate(new Vector3(0f, 0f, tiltAngle), tiltDuration).WaitForCompletion();
         yield return rt.DOLocalRotate(Vector3.zero, tiltDuration).WaitForCompletion();
         yield return new WaitForSeconds(3f);
-
+        image.sprite = emptyGlass;
+        yield return new WaitForSeconds(0.1f);
+        yield return rt.DOLocalMove(startLocalPos, settleDuration).WaitForCompletion();
         image.sprite = shaker;
         cap.CrossFadeAlpha(255f, 0f, true);
         yield return new WaitForSeconds(0.01f);

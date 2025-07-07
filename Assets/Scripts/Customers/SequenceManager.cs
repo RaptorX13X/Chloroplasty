@@ -8,10 +8,10 @@ using TMPro;
 public class SequenceManager : MonoBehaviour
 {
     [SerializeField] private CharacterSO[] characters;
-    [SerializeField] private Image characterImage;
-    [SerializeField] private Transform characterTransform;
-    [SerializeField] private float movementRange;
-    [SerializeField] private float moveDuration;
+    // [SerializeField] private Image characterImage;
+    // [SerializeField] private Transform characterTransform;
+    // [SerializeField] private float movementRange;
+    // [SerializeField] private float moveDuration;
     [SerializeField] private float waitDuration;
     private int characterIndex;
     [SerializeField] private IngredientButton[] ingredientButtons;
@@ -24,6 +24,17 @@ public class SequenceManager : MonoBehaviour
     [SerializeField] private DialogueSO endDialogue;
     
     public static SequenceManager instance;
+
+    [Header("Tiefling")]
+    [SerializeField] private GameObject tieflingParent;
+    [SerializeField] private Image tieflingNeutral;
+    [SerializeField] private Image tieflingNeutralEye;
+    [SerializeField] private Image tieflingHappy;
+    [SerializeField] private Image tieflingAngry;
+    [SerializeField] private Image tieflingAngryEye;
+
+    [SerializeField] private float fadeInDuration;
+    private int currentCharacterIndex;
 
     private void Start()
     {
@@ -52,10 +63,10 @@ public class SequenceManager : MonoBehaviour
         {
             ingredientButton.inCup = true;
         }
-        characterImage.sprite = characters[characterIndex].sprite;
-        characterImage.DOFade(255, 0.1f);
-        characterTransform.DOMove(new Vector2(characterTransform.position.x + movementRange, characterTransform.position.y), moveDuration);
-        yield return new WaitForSeconds(waitDuration + moveDuration);
+        ChooseCharacter();
+        yield return new WaitForSeconds(0.1f);
+        SpawnCharacter();
+        yield return new WaitForSeconds(fadeInDuration);
         TriggerDialogue();
         yield return new WaitForSeconds(0.2f);
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
@@ -69,19 +80,20 @@ public class SequenceManager : MonoBehaviour
         dialogueArea.text = "";
         if (characters[characterIndex].desiredDrink == RealDrink.Instance.drinkGiven)
         {
+            CharacterHappy();
             DialogueManager.Instance.StartDialogue(characters[characterIndex].dialogueDrinkCorrect);
         }
         else
         {
+            CharacterAngry();
             DialogueManager.Instance.StartDialogue(characters[characterIndex].dialogueDrinkIncorrect);
             yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive); 
             PointsManager.instance.LosePoints();
         }
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
-        characterImage.DOFade(0, 0.1f);
-        characterTransform.DOMove(new Vector2(characterTransform.position.x - movementRange, characterTransform.position.y), 0.1f);
+        DespawnCharacter();
         characterIndex++;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(fadeInDuration);
         if (characterIndex <= characters.Length)
         {
             StartCoroutine(Sequence());
@@ -124,5 +136,66 @@ public class SequenceManager : MonoBehaviour
     private void TriggerDialogue()
     {
         DialogueManager.Instance.StartDialogue(characters[characterIndex].dialogueToPlay);
+    }
+
+    private void ChooseCharacter()
+    {
+        currentCharacterIndex = characters[characterIndex].characterIndex;
+        switch (currentCharacterIndex)
+        {
+            case 0:
+                tieflingParent.SetActive(true);
+                break;
+        }
+    }
+
+    private void SpawnCharacter()
+    {
+        switch (currentCharacterIndex)
+        {
+            case 0:
+                tieflingNeutral.DOFade(255, fadeInDuration);
+                tieflingNeutralEye.DOFade(255, fadeInDuration);
+                break;
+        }
+    }
+
+    private void CharacterAngry()
+    {
+        switch (currentCharacterIndex)
+        {
+            case 0:
+                tieflingNeutral.DOFade(0, 0f);
+                tieflingNeutralEye.DOFade(0, 0f);
+                tieflingAngry.DOFade(255, 0);
+                tieflingAngryEye.DOFade(255, 0);
+                break;
+        }
+    }
+
+    private void CharacterHappy()
+    {
+        switch (currentCharacterIndex)
+        {
+            case 0:
+                tieflingNeutral.DOFade(0, 0f);
+                tieflingNeutralEye.DOFade(0, 0f);
+                tieflingHappy.DOFade(255, 0);
+                break;
+        }
+    }
+
+    private void DespawnCharacter()
+    {
+        switch (currentCharacterIndex)
+        {
+            case 0:
+                tieflingNeutral.DOFade(0, fadeInDuration);
+                tieflingNeutralEye.DOFade(0, fadeInDuration);
+                tieflingAngry.DOFade(0, fadeInDuration);
+                tieflingAngryEye.DOFade(0, fadeInDuration);
+                tieflingHappy.DOFade(0, fadeInDuration);
+                break;
+        }
     }
 }

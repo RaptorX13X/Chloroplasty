@@ -10,4 +10,5 @@ public class CharacterSO : ScriptableObject
     public DialogueSO dialogueDrinkCorrect;
     public DialogueSO dialogueDrinkIncorrect;
     public string drinkHint;
+    public int characterIndex;
 }
