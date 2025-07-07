@@ -15,7 +15,8 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: Emery
-    line: YUM YUM
+    line: Mmh. Carefull, Mr. Black Hole. I'll start thinking you're really trying
+      to impress me.
     hasChoices: 0
     choice1: 
     choice2: 
