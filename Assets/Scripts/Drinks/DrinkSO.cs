@@ -9,6 +9,7 @@ public class Ingredient : ScriptableObject
 [CreateAssetMenu(fileName = "DrinkSO", menuName = "DrinkSO")]
 public class DrinkSO : ScriptableObject
 {
+    public string drinkName;
     public Ingredient[] ingredients;
     public Color color;
 }

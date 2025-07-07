@@ -9,6 +9,5 @@ public class CharacterSO : ScriptableObject
     public DialogueSO dialogueToPlay;
     public DialogueSO dialogueDrinkCorrect;
     public DialogueSO dialogueDrinkIncorrect;
-    public string drinkName;
     public string drinkHint;
 }

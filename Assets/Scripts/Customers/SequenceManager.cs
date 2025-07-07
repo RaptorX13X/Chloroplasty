@@ -59,7 +59,7 @@ public class SequenceManager : MonoBehaviour
         TriggerDialogue();
         yield return new WaitForSeconds(0.2f);
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
-        dialogueArea.text = characters[characterIndex].drinkName;
+        dialogueArea.text = characters[characterIndex].desiredDrink.drinkName;
         // lub drink hint zależnie od odkrycia
         foreach (IngredientButton ingredientButton in ingredientButtons)
         {
