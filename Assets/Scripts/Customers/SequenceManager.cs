@@ -12,9 +12,6 @@ public class SequenceManager : MonoBehaviour
     private int characterIndex;
     [SerializeField] private IngredientButton[] ingredientButtons;
     [SerializeField] private TextMeshProUGUI dialogueArea;
-
-    [SerializeField] private Transform mainCharacterTransform;
-    [SerializeField] private Image mainCharacterImage;
     [SerializeField] private DialogueSO lossDialogue;
     [SerializeField] private DialogueSO startDialogue;
     [SerializeField] private DialogueSO endDialogue;
@@ -56,6 +53,7 @@ public class SequenceManager : MonoBehaviour
 
     private IEnumerator Sequence()
     {
+        yield return new WaitForSeconds(waitDuration);
         RealDrink.Instance.drinkMade = false;
         foreach (IngredientButton ingredientButton in ingredientButtons)
         {
@@ -148,8 +146,8 @@ public class SequenceManager : MonoBehaviour
         switch (currentCharacterIndex)
         {
             case 0:
-                tieflingNeutral.DOFade(255, fadeInDuration);
-                tieflingNeutralEye.DOFade(255, fadeInDuration);
+                tieflingNeutral.DOFade(1f, fadeInDuration);
+                tieflingNeutralEye.DOFade(1f, fadeInDuration);
                 break;
         }
     }
@@ -161,8 +159,8 @@ public class SequenceManager : MonoBehaviour
             case 0:
                 tieflingNeutral.DOFade(0, 0f);
                 tieflingNeutralEye.DOFade(0, 0f);
-                tieflingAngry.DOFade(255, 0);
-                tieflingAngryEye.DOFade(255, 0);
+                tieflingAngry.DOFade(1f, 0);
+                tieflingAngryEye.DOFade(1f, 0);
                 break;
         }
     }
@@ -174,7 +172,7 @@ public class SequenceManager : MonoBehaviour
             case 0:
                 tieflingNeutral.DOFade(0, 0f);
                 tieflingNeutralEye.DOFade(0, 0f);
-                tieflingHappy.DOFade(255, 0);
+                tieflingHappy.DOFade(1f, 0);
                 break;
         }
     }
@@ -195,8 +193,8 @@ public class SequenceManager : MonoBehaviour
 
     private void McFadeIn()
     {
-        mcSprite.DOFade(255f, fadeInDuration);
-        mcSpriteHead.DOFade(255f, fadeInDuration);
+        mcSprite.DOFade(1f, fadeInDuration);
+        mcSpriteHead.DOFade(1f, fadeInDuration);
     }
 
     private void McFadeOut()

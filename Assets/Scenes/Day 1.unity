@@ -539,7 +539,7 @@ MonoBehaviour:
   discoMusic: {fileID: 1664875065}
   lofiMusic: {fileID: 912217243}
   rockMusic: {fileID: 2054214428}
-  jukeboxScreen: {fileID: 887780438}
+  jukeboxScreen: {fileID: 35493289}
 --- !u!114 &99778416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,10 +1171,32 @@ RectTransform:
   m_AnchoredPosition: {x: -565.0112, y: -253.92499}
   m_SizeDelta: {x: 3101.9775, y: 1631.13}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &311105742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 151474394677576335, guid: b271898b4c2b7054e8db4c8d481d50dd, type: 3}
+  m_PrefabInstance: {fileID: 526888890}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &315336272 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1542482202985240406, guid: 0aa2d019a55af6346833b3fb0e3f81ba, type: 3}
   m_PrefabInstance: {fileID: 17297054}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &334974044 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7950096278772671211, guid: b271898b4c2b7054e8db4c8d481d50dd, type: 3}
+  m_PrefabInstance: {fileID: 526888890}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -2522,6 +2544,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 303499212}
     m_Modifications:
+    - target: {fileID: 151474394677576335, guid: b271898b4c2b7054e8db4c8d481d50dd, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 961146512813759303, guid: b271898b4c2b7054e8db4c8d481d50dd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.96250004
@@ -2620,6 +2646,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7288266959946606848, guid: b271898b4c2b7054e8db4c8d481d50dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7950096278772671211, guid: b271898b4c2b7054e8db4c8d481d50dd, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6653,19 +6683,17 @@ MonoBehaviour:
   - {fileID: 2070156964}
   - {fileID: 1804289456}
   dialogueArea: {fileID: 1166747243}
-  mainCharacterTransform: {fileID: 0}
-  mainCharacterImage: {fileID: 0}
   lossDialogue: {fileID: 11400000, guid: c86764cae97d1914bbd200309b3561c7, type: 2}
   startDialogue: {fileID: 11400000, guid: 4f44eadf989bde746b56f8c24729291a, type: 2}
   endDialogue: {fileID: 11400000, guid: 86ae6a3b7387dba4883c37d8e4dcf6eb, type: 2}
-  mcSprite: {fileID: 0}
-  mcSpriteHead: {fileID: 0}
+  mcSprite: {fileID: 334974044}
+  mcSpriteHead: {fileID: 311105742}
   tieflingNeutral: {fileID: 1698158800}
   tieflingNeutralEye: {fileID: 879861238}
   tieflingHappy: {fileID: 1076354458}
   tieflingAngry: {fileID: 741535037}
   tieflingAngryEye: {fileID: 315336272}
-  fadeInDuration: 2
+  fadeInDuration: 3
 --- !u!114 &1269771231
 MonoBehaviour:
   m_ObjectHideFlags: 0
