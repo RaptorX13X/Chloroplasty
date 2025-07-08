@@ -48,6 +48,7 @@ public class SequenceManager : MonoBehaviour
 
     [SerializeField] private float fadeInDuration;
     private int currentCharacterIndex;
+    private bool customerSatisfied;
 
     private void Start()
     {
@@ -75,6 +76,7 @@ public class SequenceManager : MonoBehaviour
 
     private IEnumerator Sequence()
     {
+        customerSatisfied = false;
         yield return new WaitForSeconds(waitDuration);
         RealDrink.Instance.drinkMade = false;
         foreach (IngredientButton ingredientButton in ingredientButtons)
@@ -96,20 +98,22 @@ public class SequenceManager : MonoBehaviour
         }
         yield return new WaitUntil(() => RealDrink.Instance.drinkMade);
         dialogueArea.text = "";
-        if (characters[characterIndex].desiredDrink == RealDrink.Instance.drinkGiven)
+        if (characters[characterIndex].desiredDrink.drinkName == RealDrink.Instance.drinkGiven.drinkName)
         {
             CharacterHappy();
+            customerSatisfied = true;
             DialogueManager.Instance.StartDialogue(characters[characterIndex].dialogueDrinkCorrect);
         }
         else
         {
             CharacterAngry();
+            customerSatisfied = false;
             DialogueManager.Instance.StartDialogue(characters[characterIndex].dialogueDrinkIncorrect);
             yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
         }
         yield return new WaitUntil(() => !DialogueManager.Instance.isDialogueActive);
         DespawnCharacter();
-        if (characters[characterIndex].desiredDrink == !RealDrink.Instance.drinkGiven)
+        if (!customerSatisfied)
         {
             PointsManager.instance.LosePoints();
         }

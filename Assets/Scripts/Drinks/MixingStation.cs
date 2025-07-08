@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class MixingStation : MonoBehaviour
 {
-    [SerializeField] private DrinkSO[] drinks;
+    [SerializeField] private DrinkScriptVersion[] drinks;
     public static MixingStation Instance;
-    private List<Ingredient> ingredients = new List<Ingredient>();
+    private List<IngredientScriptVersion> ingredients = new List<IngredientScriptVersion>();
     public int amountInShaker;
     [SerializeField] private IngredientButton[] ingredientButtons;
-    private DrinkSO currentDrink;
+    private DrinkScriptVersion currentDrink;
     [SerializeField] private AudioClip clip;
 
     private void Awake()
@@ -18,7 +18,7 @@ public class MixingStation : MonoBehaviour
         Instance = this;
     }
 
-    public void SelectIngredient(Ingredient ingredient)
+    public void SelectIngredient(IngredientScriptVersion ingredient)
     {
         ingredients.Add(ingredient);
         amountInShaker++;

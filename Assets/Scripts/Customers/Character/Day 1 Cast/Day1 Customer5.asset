@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Day1 Customer5
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: d7943e1029fc5a849b686b88dce99839, type: 3}
-  desiredDrink: {fileID: 11400000, guid: f8a90b48b6f706646ad1f8c69a6f962a, type: 2}
+  desiredDrink: {fileID: 1055214467053891976, guid: 241d6a8d1261ac745a277e9a615c4d33, type: 3}
   dialogueToPlay: {fileID: 11400000, guid: 1cfd86b98c855cd469a0129edb1097a8, type: 2}
   dialogueDrinkCorrect: {fileID: 11400000, guid: cc72cf9ee18dc504584aa7a0ca375b84, type: 2}
   dialogueDrinkIncorrect: {fileID: 11400000, guid: 7de6482697b31184e8c63a643f9addae, type: 2}

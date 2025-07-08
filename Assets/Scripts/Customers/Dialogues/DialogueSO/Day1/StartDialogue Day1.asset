@@ -53,7 +53,7 @@ MonoBehaviour:
     dialoguetoStartOn2: {fileID: 0}
   - character:
       name: Paradox
-    line: So please help me make sure they don't exoplode into supernovas.
+    line: So please help me make sure they don't explode into supernovas.
     hasChoices: 0
     choice1: 
     choice2: 

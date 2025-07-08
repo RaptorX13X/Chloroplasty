@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class IngredientButton : MonoBehaviour
 {
-    [SerializeField] private Ingredient ingredient;
-    [SerializeField] private IngredientButton[] buttons;
+    [SerializeField] private IngredientScriptVersion ingredient;
     public bool inCup;
 
     public void OnClicked()

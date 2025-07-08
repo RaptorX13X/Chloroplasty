@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueLines:
   - character:
       name: Emery
-    line: Tell me, Paradox, do they often order order things to "kill time"?
+    line: Tell me, Paradox, do they often order things to "kill time"?
     hasChoices: 0
     choice1: 
     choice2: 

@@ -31,7 +31,7 @@ public class RealDrink : MonoBehaviour
 
     public static RealDrink Instance;
     public bool drinkMade;
-    public DrinkSO drinkGiven;
+    public DrinkScriptVersion drinkGiven;
     
     [SerializeField] private AudioClip clip;
 
@@ -40,7 +40,7 @@ public class RealDrink : MonoBehaviour
         Instance = this;
     }
 
-    public void DrinkMade(DrinkSO drink)
+    public void DrinkMade(DrinkScriptVersion drink)
     {
         var drinkSprite = drink.icon;
         drinkGiven = drink;
@@ -90,5 +90,6 @@ public class RealDrink : MonoBehaviour
         drinkMade = true;
         yield return new WaitForSeconds(moveDuration);
         drinkGiven = null;
+        drinkMade = false;
     }
 }
